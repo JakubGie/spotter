@@ -233,7 +233,7 @@ app.get('/api/getName/:id', (req, res) => {
     })
 })
 
-
+/* testjs */
 
 app.get('/api/howManySpots/:name', (req, res) => {
     const name = req.params.name

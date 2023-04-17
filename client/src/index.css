@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+:root
+{
+  --white: #eeeeee;
+  --black: #000000;
+  --brand: #3d69e4;
+  --red: #d61c2c;
+  --lighterBrand: rgb(42, 76, 170);
+}
+
+::selection
+{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+*
+{
+  font-family: 'Montserrat', sans-serif;
+}
+
+body
+{
+  background: rgb(255,255,255);
+  background: linear-gradient(118deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 100%);
+  margin: 0;
+  font-weight: 500;
+  color: var(--black);
+}
+
+img.loading
+{
+  width: 70px;
+  margin: auto;
+  display: block;
+}
+
+.container
+{
+  max-width: 1000px;
+  margin: auto;
+}
+
+.loadingComponent
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a
+{
+  text-decoration: none;
+  color: var(--black);
+}
+
+.navbar a.this
+{
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.navbar
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  align-items: center;
+}
+
+.navbar h2
+{
+  margin: 0;
+  font-size: 30px;
+}
+
+.navbar .search
+{
+  border: 0;
+  background: none;
+  border-bottom: 1px solid var(--black);
+  outline: none;
+  font-size: 18px;
+  padding: 2px 2px;
+  text-align: center;
+}
+
+.create
+{
+  color: var(--brand) !important;
+  padding: 10px 15px;
+  border-radius: 9999px;
+  border: 2px solid var(--brand);
+  font-weight: 600;
+  transition: all .1s ease-in-out;
+}
+
+.create:hover
+{
+  background-color: var(--brand);
+  color: var(--white) !important;
+}
+
+/* Search */
+.searchBlock
+{
+  margin: 20px 0;
+}
+
+.noResults
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+/* Footer */
+footer
+{
+  margin: 40px 0;
+}
+
+.footer a
+{
+  text-decoration: none;
+  color: var(--black);
+}
+
+/* Spot */
+.spotted small.spanLabel
+{
+  background-color: var(--brand);
+  color: var(--white);
+  font-size: 17px;
+  padding: 5px 13px;
+  border-radius: 999px;
+}
+
+.spottedInfo
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h2.nSpots
+{
+  text-align: left;
+}
+
+.spotted h1
+{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 3px;
+}
+
+.spotted div.label
+{
+  display: flex;
+  align-items: center;
+}
+
+.newestSpots
+{
+ text-align: left;
+ width: 100%
+}
+
+.spots
+{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.specialSpot
+{
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: 3px solid var(--brand);
+  padding: 17px 22px !important;
+}
+
+.specialLoadingSpot
+{
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border: 3px solid var(--brand);
+}
+
+
+.specialSpot2
+{
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+button.addingButton
+{
+  background-color: #fff !important;
+  color: var(--brand) !important;
+  border: 2px solid var(--brand) !important;
+}
+
+.spot
+{
+  padding: 20px 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px #aaaaaa;
+}
+
+.userName
+{
+  font-size: 13px
+}
+
+.spot p
+{
+  margin: 0;
+}
+
+.spot .reactions
+{
+  font-size: 23px;
+  margin-top: 8px;
+  color: var(--black);
+}
+
+.spot .reactions small
+{
+  font-size: 15px;
+  display: flex;
+  gap: 8px;
+}
+
+.reactIcon
+{
+  cursor: pointer;
+}
+
+.loadMore
+{
+  cursor: pointer;
+  border: 0;
+  background: none;
+  font-size: 17px;
+}
+
+.addSpot
+{
+  width: 400px;
+  max-width: 400px;
+  min-width: 400px;
+  margin: auto;
+}
+
+.addSpot textarea
+{
+  border: 0;
+  background-color: #fff;
+  outline: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 98px;
+  padding: 15px 15px;
+  border-radius: 20px;
+  font-size: 18px;
+  box-shadow: 2px 2px 3px #aaaaaa;
+  box-sizing: border-box;
+}
+
+.addSpot button
+{
+  width: 100%;
+  border: 0;
+  background-color: var(--brand);
+  color: #fff;
+  font-size: 22px;
+  border-radius: 999px;
+  padding: 7px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  border: 2px solid var(--brand);
+
+}
+
+.addSpot button:hover
+{
+  background-color: #fff;
+  color: var(--brand);
+
+}
+
+a.spottedSign
+{
+  background-color: var(--brand);
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all .1s ease-in-out;
+}
+
+a.spottedSign:hover
+{
+  background-color: var(--lighterBrand);
+}
+
+.smallSpottedInfo
+{
+  display: flex;
+  align-items: center;
+  margin-top: 18px !important;
+}
+
+.smallSpottedInfo .date
+{
+  
+  color: var(--brand);
+  padding: 3px 8px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 2px solid var(--brand);
+}
+
+.spot .smallSpottedInfo
+{
+  font-size: 23px;
+  margin-top: 8px;
+  color: var(--black);
+  font-size: 15px;
+  gap: 8px;
+}
+
+
+
+/* Spotteds */
+.Spotteds
+{
+  display: inline-block;
+}spottedLink
+
+.Spotteds h2
+{
+  font-size: 20px;
+}
+
+.Spotteds .spottedLink
+{ 
+    background-color: var(--brand);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 9999px;
+    margin: 3px;
+    transition: all .1s ease-in-out;
+}
+
+.Spotteds .spottedLink:hover
+{
+  background-color: var(--lighterBrand);
+}
+
+/* createNewSpotted */
+
+.createNewSpotted h1
+{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.createNewSpotted input[type=text]
+{
+  border: 0;
+  background: none;
+  outline: none;
+  font-size: 20px;
+  border-bottom: 2px solid var(--black);
+  padding: 4px 0;
+  width: 200px;
+}
+
+.createNewSpotted form
+{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nsName
+{
+  border-bottom: 2px solid var(--black);
+  
+  padding: 4px 0;
+  padding-right: 5px;
+}
+
+.nsNameDiv
+{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.createNewSpotted h2
+{
+  font-size: 22px
+}
+
+.unInput
+{
+  width: 260px !important;
+}
+
+.createNewSpotted textarea
+{
+  border: 0;
+  background-color: #fff;
+  outline: 0;
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
+  min-height: 98px;
+  padding: 15px 15px;
+  border-radius: 20px;
+  font-size: 18px;
+  box-shadow: 2px 2px 3px #aaaaaa;
+  box-sizing: border-box;
+}
+
+.createNewSpotted button
+{
+  display: block;
+  margin: auto;
+  width: 300px;
+  border: 0;
+  background-color: var(--brand);
+  color: #fff;
+  font-size: 22px;
+  border-radius: 999px;
+  padding: 7px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  border: 2px solid var(--brand);
+  margin-top: 15px;
+  transition: all .1s ease-in-out;
+}
+
+.createNewSpotted button:hover
+{
+  background-color: #fff;
+  color: var(--brand);
+
+}
+
+.spottedAdded
+{
+  font-weight: 500;
+}
+
+.spottedAdded a
+{
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.spottedAdded a:hover
+{
+  color: var(--lighterBrand)
+}
+
+/* Additional */
+@media screen and (max-width:1366px)
+{   
+  .container
+  {
+    padding: 0 15px;
+  }  
+}
+
+/* Mobile */
+@media screen and (max-width:1024px)
+{   
+  
+}
+
+
+/* Scrollbar */
+
+body::-webkit-scrollbar
+{
+	width: 10px;
+	height: 10px;
+}
+
+body::-webkit-scrollbar-track
+{
+	background-color: var(--white);
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: var(--brand);
+}

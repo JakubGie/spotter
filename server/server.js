@@ -2,10 +2,14 @@ const express = require('express')
 const mongoose = require('mongoose')
 const Spotted = require('./models/spotted')
 const Spot = require('./models/spot')
+require('dotenv').config()
+
+
+
 
 // kolberg 1dCsi6VWMf6gZQGd
 
-const dbURI = 'mongodb+srv://kolberg:1dCsi6VWMf6gZQGd@spotter0.2qez1b1.mongodb.net/spotter?retryWrites=true&w=majority'
+const dbURI = process.env.DB_URI
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => {

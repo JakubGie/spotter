@@ -5,10 +5,6 @@ const Spot = require('./models/spot')
 require('dotenv').config()
 
 
-
-
-// kolberg 1dCsi6VWMf6gZQGd
-
 const dbURI = process.env.DB_URI
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -21,13 +17,10 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch((err) => {
         console.log(err)
     })
-/* test remote */
+
 
 const app = express()
 
-/*const spots = { "spots": [
-    {""}
-] }*/
 
 function getId(name) {
     return new Promise((resolve, reject) => {
@@ -146,18 +139,6 @@ app.post('/api/add-spotted', (req, res) => {
     }
 
     doWork()
-    /*const spot = new Spot({
-        spotted: '6437175cee9cfc17b582dea6',
-        content: 'testujemy serwer hehe',
-        likes: 0
-    })
-
-    spot.save().then((result) => {
-        console.log(result)
-        res.send(result)
-    }).catch((err) => {
-        console.log(err)
-    })*/
 })
 
 app.post('/api/add-spot/:name', (req, res) => {
@@ -173,18 +154,6 @@ app.post('/api/add-spot/:name', (req, res) => {
     }
 
     doWork()
-    /*const spot = new Spot({
-        spotted: '6437175cee9cfc17b582dea6',
-        content: 'testujemy serwer hehe',
-        likes: 0
-    })
-
-    spot.save().then((result) => {
-        console.log(result)
-        res.send(result)
-    }).catch((err) => {
-        console.log(err)
-    })*/
 })
 
 app.get('/api', (req, res) => {

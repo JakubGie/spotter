@@ -12,7 +12,7 @@ const Navbar = (props) => {
         <nav>
             <div className="container">
                 <div className="navbar">
-                    <h2><Link to="/" onClick={props.clearSearch}>SPOTNIJ.pl</Link></h2>
+                    <h2><Link to="/" onClick={props.clearSearch}>SPOTTER</Link></h2>
                   
                         <input 
                         type="text" 

@@ -7,7 +7,7 @@ const Footer = () => {
         <footer>
             <div className="container">
                 <div className="footer">
-                    <Link to="/">Spotter.pl</Link> &copy; {currentYear} 
+                    <Link to="/">Spotter</Link> &copy; {currentYear} 
                 </div>
             </div>
         </footer>

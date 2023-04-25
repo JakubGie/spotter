@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link, redirect } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 const CreateNewSpotted = () => {
 
@@ -35,6 +36,9 @@ const CreateNewSpotted = () => {
 
     return (
         <div className="container createNewSpotted">
+            <Helmet>
+                <title>Stwórz nowy spotted | Spotter</title>
+            </Helmet>
             <h1>Stwórz nowy spotted</h1>
             {isPending === true ? (
                  <img className="loading" src={process.env.PUBLIC_URL + '/loading.svg'} /> 

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PopularSpotteds from '../components/PopularSpotteds'
 import ShowSpots from '../components/ShowSpots'
 import SpotInfo from '../components/SpotInfo'
+import { Helmet } from 'react-helmet'
 
 
 
@@ -80,6 +81,7 @@ const Spot = () => {
                     }}>
                         <SpotInfo name={name} />
                     </div>
+                    
                     <div className="addSpot">
                         <h2>Dodaj anonimowego spota:</h2>
                         <form onSubmit={handleSubmit}>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 const SpotInfo = ({name}) => {
     const fetchUrl = '/api/getSpottedInfo/'+name
@@ -52,6 +53,9 @@ const SpotInfo = ({name}) => {
         ) : (
             spotInfo.map((element) => (
                 <div className="spottedInfo">
+                    <Helmet>
+                        <title>Spotted {element.name} | Spotter</title>
+                    </Helmet>
                     <h1 className="spottedHeader">
                         <div className="label"><small className="spanLabel">Spotted</small></div> {element.name}
                     </h1>
